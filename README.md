@@ -1,9 +1,9 @@
 # CAKEPHP APPLICATION TASK
 #Deployment of CAKEPHP APPLICATION AND DOCKER FILE
 
-We have to clone the repository "https://github.com/notejam/express.git" of Express Application to our director.
+We have to clone the repository "https://github.com/Ritik8937/CAKEPHP.git" of CAKEPHP Application to our directory.
 
-Step1: We create a docker file to dockerised this Express appilcation. by command,
+Step1: We create a docker file to dockerised this CAKEPHP appilcation. by command,
 
     $ vim Dockerfile
 
@@ -23,19 +23,17 @@ we can see the port number by using command,
 
     $ sudo docker ps
 
-Now, we can check our Express Application are and running or not, for this open browser and give address http://localhost:port-number
+Now, we can check our CAKEPHP Application are and running or not, for this open browser and give address http://localhost:port-number
 
-Then we have to deploy this application on Kubernetes cluster. After setting up the Kubernetes cluster with kubeadm, create a deployment for this Express Applicatiom on master node.
+Then we have to deploy this application on Kubernetes cluster. After setting up the Kubernetes cluster with kubeadm, create a deployment for this CAKEPHP Applicatiom on master node.
 
 Step1:
 
-    $ sudo kubectl create -f <deployemnt_name.yaml>
+    $ kubectl run cakephptried --image=8937960489/firstrepo:cakephp --restart=Never
 
-Step 2: Now check the deployments by this command,
 
-    $ sudo kubectl get deployments
-
-and status of pods with this command,
+Step2:
+Check status of pods with this command,
 
     $ sudo kubectl get pods
 
